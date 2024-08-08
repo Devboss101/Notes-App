@@ -91,7 +91,9 @@ class NotesUI {
 
         this.root.querySelector('.add_btn').addEventListener('click', () => {
             this.note_add()
-            this.update_active_page(this.root.querySelector('.bar'))
+            if (window.innerWidth < 786) {
+                this.update_active_page(this.root.querySelector('.bar'))
+            }
         })
 
         this.root.querySelectorAll(".icon").forEach((icon, index) => {
@@ -151,7 +153,10 @@ class NotesUI {
         note_list_wrapper.querySelectorAll(".note_list_item").forEach(item => {
             item.addEventListener('click', () => {
                 this.note_selected(item.dataset.noteId)
-                this.update_active_page(this.root.querySelector(".bar"))
+                if (window.innerWidth < 786) {
+                    this.update_active_page(this.root.querySelector('.bar'))
+                }
+               
             })
 
         
