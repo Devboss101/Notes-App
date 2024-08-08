@@ -218,7 +218,6 @@ aside header{
 
     .main{
         width: 100%;
-        z-index: -1;
         height: 100vh;
     }
     aside{
