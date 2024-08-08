@@ -20,13 +20,45 @@ aside{
 
 }
 
+.inactive{
+    display: none;
+}
+
+.icon{
+    width: 25px;
+    height: 25px;
+    fill: #fff;
+    display: none;
+    z-index: 1;
+    position: absolute;
+}
+
+.svg_div{
+    position: relative;
+    z-index: 1000;
+    margin-top: 25px;
+    margin-left: 10px;
+    display: none;
+}
+
+.times{
+    fill: #000;
+    margin-top: -20px;
+    margin-left: -8px;
+}
+
+.activeIcon{
+    display: block;
+}
+
 aside header{
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    padding-left: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 
 #title{
@@ -125,7 +157,12 @@ aside header{
     width: 70%;
     height: 100vh;
     padding: 0 10px;
-    padding-top: 10px;
+    padding-top: 16px;
+    display: block;
+}
+
+.activePage{
+    display: block;
 }
 
 .visibility {
@@ -154,9 +191,84 @@ aside header{
     overflow: scroll;
 }
 
-hr{
-    border: 2px solid rgba(92, 62, 6, 0.342);
+
+
+@media (max-width: 786px) {
+    .main{
+        width: 60%;
+    }
+    aside{
+        width: 40%;
+    }
+    .svg_div{
+        display: block;
+    }
+
+    aside header{
+        padding-left: 100px;
+    }
+
+    .main{
+        display: block;
+    }
+
 }
+
+@media (max-width: 672px) {
+
+    .main{
+        width: 100%;
+        z-index: -1;
+        height: 100vh;
+    }
+    aside{
+        width: 100%;
+        display: block;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .note_list_item{
+        width: 100%;
+    }
+
+    aside header{
+        background-color: #000;
+        padding-right: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    #title{
+        color: #fff;
+    }
+
+    .add_btn{
+        background-color: #fff;
+        color: #000;
+    }
+
+    #inpBody{
+        width: 100%;
+        font-size: 15px;
+    }
+
+    #inpTitle{
+        font-size: 25px;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
 
 
 
